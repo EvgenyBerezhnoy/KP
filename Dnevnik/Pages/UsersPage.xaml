@@ -1,0 +1,34 @@
+﻿<Page x:Class="Dnevnik.UsersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Dnevnik"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UsersPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" ></RowDefinition>
+            <RowDefinition Height="*" ></RowDefinition>
+            <RowDefinition Height="*" ></RowDefinition>
+            <RowDefinition Height="*" ></RowDefinition>
+            <RowDefinition Height="*" ></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="txtGroup" Text="Фамилия" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
+        <TextBlock x:Name="txtLastName" Text="Имя" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
+        <TextBlock x:Name="FirstName" Text="Логин" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
+        <TextBlock Text="Пароль" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
+        <TextBlock Text="Роль" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
+        <TextBox x:Name="txtLast" Text="{Binding LastName}" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" ></TextBox>
+        <TextBox x:Name="txtFirst" Text="{Binding FirstName}" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" ></TextBox>
+        <TextBox x:Name="txtLogin" Text="{Binding Login}" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" ></TextBox>
+        <TextBox x:Name="txtPassword" Text="{Binding Password}" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" ></TextBox>
+        <Button x:Name="btnAddUsers" Grid.Row="4" HorizontalAlignment="Left"  VerticalAlignment="Center" Content="Сохранить" Click="btnAddUsers_Click"></Button>
+        <ComboBox Name="Role" Height="30" Width="175"  HorizontalAlignment="Right"  SelectedItem="{Binding Role}" DisplayMemberPath="Name"  SelectionChanged="Role_SelectionChanged"  Grid.Row="4"  ></ComboBox>
+
+
+
+    </Grid>
+</Page>
